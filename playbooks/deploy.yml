@@ -10,13 +10,8 @@
 
     - name: Copy docker compose file
       copy:
-        src: ../files/docker-compose.yml
+        src: ../files/docker-compose.yml.j2
         dest: /opt/tekton-demo/docker-compose.yml
-
-    - name: Copy environment file
-      copy:
-        src: ../files/app.env
-        dest: /opt/tekton-demo/app.env
 
     - name: Stop existing application
       shell: |
