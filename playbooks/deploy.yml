@@ -10,7 +10,7 @@
 
     - name: Copy docker compose file
       copy:
-        src: ../files/docker-compose.yml.j2
+        src: ../templates/docker-compose.yml.j2
         dest: /opt/tekton-demo/docker-compose.yml
 
     - name: Stop existing application
